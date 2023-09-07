@@ -7,6 +7,8 @@ public class Menu {
         Scanner selector = new Scanner(System.in);
         boolean exit = false;
 
+        PriceInput priceInput = new PriceInput();
+
         while (!exit) {
             //Menu options
             System.out.println("Elpriser");
@@ -25,16 +27,10 @@ public class Menu {
                     exit = true;
                 }
                 case "1" -> {
-                    PriceInput.price();
+                    priceInput.price();
                 }
                 case "2" -> {
-
-                }
-                case "3" -> {
-
-                }
-                case "4" -> {
-
+                    MinMax.minmax(priceInput);
                 }
                 default -> {
                     System.out.println("Ogiltigt val, försök igen!");

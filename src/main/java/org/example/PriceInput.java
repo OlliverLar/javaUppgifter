@@ -1,11 +1,17 @@
 package org.example;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.Scanner;
 
 public class PriceInput {
-    public static void price() {
+    private LinkedHashMap<String, Integer> priceInterval; // Declare priceInterval as a class member
+
+    public PriceInput() {
+        this.priceInterval = new LinkedHashMap<>();
+    }
+
+    public void price() {
         Scanner inputScanner = new Scanner(System.in);
-        LinkedHashMap<String, Integer> priceInterval = new LinkedHashMap<>();
         String[] hoursArray = new String[24];
 
         for (int hour = 0; hour < 24; hour++) {
@@ -27,8 +33,10 @@ public class PriceInput {
                 }
             }
         }
-        for (String i : priceInterval.keySet()) {
-            System.out.println("Tid: " + i + " Pris: " + priceInterval.get(i));
-        }
+    }
+
+    // Getter method to access the priceInterval map
+    public LinkedHashMap<String, Integer> getPriceInterval() {
+        return priceInterval;
     }
 }
