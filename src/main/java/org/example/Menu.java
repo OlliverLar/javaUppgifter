@@ -32,6 +32,9 @@ public class Menu {
                 case "2" -> {
                     MinMax.minmax(priceInput);
                 }
+                case "3" -> {
+                    printSorted.printsorted(priceInput);
+                }
                 default -> {
                     System.out.println("Ogiltigt val, försök igen!");
                 }
