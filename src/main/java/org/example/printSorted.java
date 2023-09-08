@@ -14,10 +14,8 @@ public class printSorted {
 
         priceList.sort(Comparator.comparingInt(Map.Entry::getValue));
         System.out.println("Priserna sorterade:");
-        for(int i = 0; i < priceList.size(); i++) {
-            Map.Entry<String, Integer> sortedPrice = priceList.get(i);
-            System.out.println("Tid: " + sortedPrice.getKey() + " Pris: " + sortedPrice.getValue());
-
+        for (Map.Entry<String, Integer> sortedPrice : priceList) {
+            System.out.println("Tid: " + sortedPrice.getKey() + " Pris: " + sortedPrice.getValue() + " öre");
         }
 
     }

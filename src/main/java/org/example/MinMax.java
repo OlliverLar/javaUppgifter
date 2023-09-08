@@ -22,13 +22,13 @@ public class MinMax {
             Map.Entry<String, Integer> smallest2 = priceList.get(1);
 
             System.out.println("De två billigaste tiderna:");
-            System.out.println("1. Tid: " + smallest1.getKey() + " Pris: " + smallest1.getValue());
-            System.out.println("2. Tid: " + smallest2.getKey() + " Pris: " + smallest2.getValue());
+            System.out.println("1. Tid: " + smallest1.getKey() + " Pris: " + smallest1.getValue() + " öre");
+            System.out.println("2. Tid: " + smallest2.getKey() + " Pris: " + smallest2.getValue() + " öre");
         } else {
             System.out.println("Något gick snett, se till att du har skrivit in minst 2 priser!");
         }
 
-        System.out.println("Medelpriset är: " + averagePrice);
+        System.out.println("Medelpriset är: " + averagePrice + " öre");
     }
     private static double calculateAveragePrice(LinkedHashMap<String, Integer> priceInterval) {
         int totalPrices = 0;

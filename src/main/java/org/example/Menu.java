@@ -35,6 +35,9 @@ public class Menu {
                 case "3" -> {
                     printSorted.printsorted(priceInput);
                 }
+                case "4" -> {
+                    BestCharge.findBestCharge(priceInput);
+                }
                 default -> {
                     System.out.println("Ogiltigt val, försök igen!");
                 }
